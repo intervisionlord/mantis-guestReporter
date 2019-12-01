@@ -1,5 +1,3 @@
-[![Coverage Status](https://coveralls.io/repos/github/intervisionlord/mantis-guestReporter/badge.svg?branch=master)](https://coveralls.io/github/intervisionlord/mantis-guestReporter?branch=master)
-
 # Mantis Guest Reporter
 Инструмент, позволяющий пользователям анонимно отправлять баг-репорты в систему баг-треккинга Mantis.
 Использует Soap API Mantis
