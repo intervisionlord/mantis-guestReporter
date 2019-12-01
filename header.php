@@ -8,7 +8,10 @@
   <body>
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Mantis Reporter</a>
+        <a class="navbar-brand" href="./">
+          <img src="./inc/imgs/caterpillar.png" width="30" height="30" class="d-inline-block align-top" alt="Mantis Reporter Logo">
+          Mantis Reporter
+        </a>
 
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">

@@ -9,3 +9,9 @@ if ($FORCE_LOCALE == '0') {
 }
 
 require_once('L10n/'.$CUR_LOCALE.'/lang.php');
+
+if (!file_exists('./conf/auth.conf_secret.php')) {
+  require_once('./conf/auth.conf.php');
+} else {
+  require_once('/conf/auth.conf_secret.php');
+}

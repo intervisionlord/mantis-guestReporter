@@ -9,3 +9,4 @@
 
 $USERNAME = "";
 $PASSWORD = "";
+$MANTISURL = "";
