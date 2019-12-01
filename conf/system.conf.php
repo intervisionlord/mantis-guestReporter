@@ -6,5 +6,5 @@
 * Copyright © 2019 Intervision
 */
 
-$VERSION = '0.1';
+$VERSION = '0.1.5';
 $FORCE_LOCALE = "0"; // Используется название локали (например ru_RU). По умолчанию "0"
