@@ -5,9 +5,3 @@ php:
   - '7.1'
   - '7.2'
   - '7.3'
-
-before_install:
-  - ./bin/install-icu
-
-install:
-  - 'pecl install intl'
