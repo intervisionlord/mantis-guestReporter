@@ -12,19 +12,32 @@ include_once('header.php');
 
 require_once('./inc/nusoap/0.9.7/nusoap.php');
 
-$WSDL_POINT = "https://itsm.twr.su/api/soap/mantisconnect.php";
-$issue_id = 80;
-
 $params = array(
 	'username' => $USERNAME,
 	'password' => $PASSWORD,
-	'issue_id' => $issue_id
+	'project_id' => $PROJECT_ID,
 );
+
+$get_user_accessible = array (
+	'username' => $USERNAME,
+	'password' => $PASSWORD,
+);
+
 $client = new nusoap_client($WSDL_POINT, false);
-$result = $client->call('mc_issue_get', $params, 'https://itsm.twr.su/api/soap/mantisconnect.php', 'http://soap.amazon.com');
+$categories = $client->call('mc_project_get_categories', $params, $WSDL_POINT, 'http://soap.amazon.com'); // Получаем доступные в проекте категории
+$projectlist = $client->call('mc_projects_get_user_accessible', $get_user_accessible, $WSDL_POINT, 'http://soap.amazon.com'); // Получаем список проектов, в которые можно репортить
+
+echo '<h2>'. SELECTEDPROJECT .'</h2>';
 
 echo "<pre>";
-print_r ($result);
+foreach ($projectlist as $list => $project) {
+	echo $project.'<br>';
+}
+echo '<hr>';
+foreach ($categories as $cat => $category) {
+	echo $category.'<br>';
+}
+
 echo "</pre>";
 
 
