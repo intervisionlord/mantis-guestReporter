@@ -1,10 +1,10 @@
-      </table>
-        <div class="footer fixed-bottom navbar navbar-expand-lg navbar-light bg-light">
-          <span class="navbar-text">
-            Mantis Reporter &copy; 2019 Intervision
-          </span>
+  </div> <!-- div внутри main закрывающий -->
+
+      <footer class="footer fixed-bottom mt-auto py-3 bg-light">
+        <div class="container">
+          <p class="text-muted text-right">Mantis Reporter &copy; 2019 Intervision</p>
         </div>
-      </div> <!-- закрытие главного контейнера -->
-    <script src="./inc/bootstrap/js/bootstrap.min.js"></script>
+      </footer>
+    <script src="./inc/bootstrap/js/bootstrap.bundle.js"></script>
   </body>
 </html>

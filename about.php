@@ -8,7 +8,6 @@
 require_once('./core/core.php');
 include_once('header.php');
 
-
 echo '
 <center><h2>'.ABOUTSTRING.'</h2></center>
   <table class="table table-striped table-sm">
