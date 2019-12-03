@@ -29,4 +29,4 @@
   </nav>
 </header>
 
-  <div class="container-fluid pt-5 mt-5"> <!-- div внутри main (открывающий) -->
+  <div class="container-fluid pt-5 mt-5 mb-5 pb-5"> <!-- div внутри main (открывающий) -->
