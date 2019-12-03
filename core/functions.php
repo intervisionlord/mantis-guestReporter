@@ -20,7 +20,7 @@ function check_locale($CL_PARAM) {
   }
 
   if ($CL_PARAM == 'debug') {
-    $LOCALE_DIR = './L10n/'.$SYS_LOCALE;
+    $LOCALE_DIR = './L10n/'.$SYS_LOCALE; // Перевести в мультияз. или убрать...
     echo 'Локаль системы: '.$SYS_LOCALE.', искомый пакет локализации: '.$LOCALE_DIR;
   }
 }

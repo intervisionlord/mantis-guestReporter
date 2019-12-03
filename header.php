@@ -7,7 +7,7 @@
 
   <body>
     <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="header fixed-top navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="./">
           <img src="./inc/imgs/caterpillar.png" width="30" height="30" class="d-inline-block align-top" alt="Mantis Reporter Logo">
           Mantis Reporter
@@ -16,8 +16,9 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="about.php"><?php echo ABOUTSTRING ?></a>
+                <a class="nav-link" href="about.php"><?php echo ABOUTSTRING; ?></a>
               </li>
             </ul>
           </div>
-        </nav>
+        </div>
+      <table height=100%>
