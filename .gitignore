@@ -1,2 +1,2 @@
 # Файл настройки с паролями
-conf/auth.conf_secret.php
+conf/*_secret.php

@@ -6,8 +6,7 @@
 * Copyright © 2019 Intervision
 */
 
-require_once('./conf/auth.conf.php');
-//require_once('useapi.php');
+//require_once('./conf/conf.php');
 
 function check_locale($CL_PARAM) {
   $SYS_LOCALE = locale_get_default();

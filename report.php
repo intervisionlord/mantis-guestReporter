@@ -12,7 +12,7 @@ require_once('./inc/nusoap/0.9.7/nusoap.php');
 $response = $_POST["g-recaptcha-response"];
 $url = 'https://www.google.com/recaptcha/api/siteverify';
 $data = array(
-  'secret' => '6Le-D8YUAAAAAHaNyXfsBpru2hUZ6xiUtzQsfCoT',
+  'secret' => $CAPTCHA_SECRET,
   'response' => $_POST["g-recaptcha-response"]
 );
 $options = array(
