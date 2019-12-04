@@ -8,21 +8,56 @@
 require_once('./core/core.php');
 include_once('header.php');
 
+require_once('./inc/nusoap/0.9.7/nusoap.php');
+
+if ($FORCE_LOCALE == "0") {
+  $CHECK_F_LOCALE = LOCALENOTFORCED;
+  $LOCALECOLOR = "success";
+} else {
+  $CHECK_F_LOCALE = LOCALEFORCED;
+  $LOCALECOLOR = "warning";
+}
+
+$client = new nusoap_client($WSDL_POINT, false);
+$MANTISVERSION = $client->call('mc_version', $WSDL_POINT);
+
 echo '
-<center><h2>'.ABOUTSTRING.'</h2></center>
-  <table class="table table-striped table-sm">
-    <tr>
-      <th scope="col">'.ABTPARAM.'</th>
-      <th scope="col">'.ABTVALUE.'</th>
-    </tr><tr>
-      <td>'.ABTVERSIONPARAM.'</td>
-      <td>'.$VERSION.'</td>
-    </tr><tr>
-      <td>'.LANGSTRING.'</td>
-      <td>'.$CUR_LOCALE.'</td>
-    </tr>
-  </table>';
+<div class="container shadow p-4">
+  <table class="table table-hover table-bordered table-sm">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col" colspan="2">'.ABOUTSTRING.'</th>
+      </tr>
+    </thead>
+      <tr>
+        <td>'.ABTVERSIONPARAM.'</td>
+        <td>'.$VERSION.' <span class="text-muted">('.$RELEASEDATE.')</span></td>
+      </tr>
+    <thead class="table-secondary">
+      <tr>
+        <th scope="col" colspan="2">'.LANGSTRING.'</th>
+      </tr>
+    </thead>
+      <tr>
+        <td>'.LANGSTRING.'</td>
+        <td>'.$CUR_LOCALE.'</td>
+      </tr><tr>
+        <td>'.LANGVSTR.'</td>
+        <td>'.LANG_VERSION.'</td>
+      </tr><tr>
+        <td>'.LANGTYPE.'</td>
+        <td><span class="text-'.$LOCALECOLOR.'">'.$CHECK_F_LOCALE.'</span></td>
+      </tr>
+    <thead class="table-secondary">
+      <tr>
+        <th scope="col" colspan="2">'.INTEGRATION.'</th>
+      </tr>
+    </thead>
+      <tr>
+        <td>'.MANTISVERSION.'</td>
+        <td>'.$MANTISVERSION.'</td>
+      </tr>
+  </table>
+</div>';
 
 include_once('footer.php');
-
-?>

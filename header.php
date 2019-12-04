@@ -1,10 +1,16 @@
+<?php
+require_once('./core/core.php');
+echo '
 <!doctype html>
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="./inc/bootstrap/css/bootstrap.css">
-    <script src="https://kit.fontawesome.com/d984210af5.js" crossorigin="anonymous"></script>
+    <script src="./inc/fa/fa.js" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js?hl='.$LOCALE_SHORT.'" async defer></script>
   </head>
+
+  <title>Mantis Reporter</title>
 
 <header>
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
@@ -18,13 +24,13 @@
           <a class="nav-link disabled" href="#">&diams;</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo $MANTISURL ?>" target="_blank"><i class="fa fa-external-link"></i> <?php echo GOTOMANTIS; ?></a>
+          <a class="nav-link" href="'.$MANTISURL.'" target="_blank"><i class="fa fa-external-link"></i> '.GOTOMANTIS.'</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#">&diams;</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="about.php"><i class="fa fa-info-circle"></i> <?php echo ABOUTSTRING; ?></a>
+          <a class="nav-link" href="about.php"><i class="fa fa-info-circle"></i> '.ABOUTSTRING.'</a>
         </li>
       </ul>
     </div>
@@ -32,3 +38,4 @@
 </header>
 
   <div class="container-fluid pt-5 mt-5 mb-5 pb-5"> <!-- div внутри main (открывающий) -->
+';
