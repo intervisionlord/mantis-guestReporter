@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./inc/bootstrap/css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/d984210af5.js" crossorigin="anonymous"></script>
+  </head>
+
+<header>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./">
+      <img src="./inc/imgs/caterpillar.png" width="30" height="30" class="d-inline-block align-top" alt="Mantis Reporter Logo">
+        Mantis Reporter
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">&diams;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo $MANTISURL ?>" target="_blank"><i class="fa fa-external-link"></i> <?php echo GOTOMANTIS; ?></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">&diams;</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.php"><i class="fa fa-info-circle"></i> <?php echo ABOUTSTRING; ?></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+  <div class="container-fluid pt-5 mt-5 mb-5 pb-5"> <!-- div внутри main (открывающий) -->
