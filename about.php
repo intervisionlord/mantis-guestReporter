@@ -22,7 +22,7 @@ $client = new nusoap_client($WSDL_POINT, false);
 $MANTISVERSION = $client->call('mc_version', $WSDL_POINT);
 
 echo '
-<div class="container shadow p-4">
+<div class="container shadow p-4 bgcustom">
   <table class="table table-hover table-bordered table-sm">
     <thead class="thead-dark">
       <tr>

@@ -27,7 +27,7 @@ $categories = $client->call('mc_project_get_categories', $params, $WSDL_POINT); 
 $projectlist = $client->call('mc_projects_get_user_accessible', $get_user_accessible, $WSDL_POINT); // Получаем список проектов, в которые можно репортить
 
 echo '
-<div class="container-sm border shadow p-4">
+<div class="container-sm border shadow p-4 bgcustom">
 <h3>'. FILLTHEFORM .'</h3>
 <hr>
 	<form id="bugreport" method="POST" action="report.php">
