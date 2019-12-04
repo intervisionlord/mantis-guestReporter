@@ -6,7 +6,7 @@
 * Copyright © 2019 Intervision
 */
 
-$VERSION = '0.1.11';
+$VERSION = '0.1.11b';
 $RELEASEDATE = '04.12.19';
 
 require_once('./conf/system.conf.php');
