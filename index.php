@@ -27,19 +27,49 @@ $client = new nusoap_client($WSDL_POINT, false);
 $categories = $client->call('mc_project_get_categories', $params, $WSDL_POINT, 'http://soap.amazon.com'); // Получаем доступные в проекте категории
 $projectlist = $client->call('mc_projects_get_user_accessible', $get_user_accessible, $WSDL_POINT, 'http://soap.amazon.com'); // Получаем список проектов, в которые можно репортить
 
-echo '<h2>'. SELECTEDPROJECT .'</h2>';
+//echo '<h2>'. FILLTHEFORM .'</h2>';
 
-echo "<pre>";
+echo '
+<div class="container-sm border shadow p-4">
+<h3>'. FILLTHEFORM .'</h3>
+<hr>
+	<form>
+		<div class="row">
+			<div class="col">
+				<label for="FormControlSelect1"><b>Выберите проект</b><p class="text-muted">(К какому продукту относится запрос)</p> </label>
+				<select class="form-control" id="FormControlSelect1">
+';
+
 foreach ($projectlist as $list => $project) {
-	echo $project.'<br>';
+	echo '<option>'.$project["id"].' - '.$project["name"].'</option>';
 }
-echo '<hr>';
+
+echo '
+				</select>
+			</div>
+			<div class="col">
+				<label for="FormControlSelect2"><b>Выберите Категорию запроса</b><p class="text-muted">(К какому типу относится запрос)</p></label>
+				<select class="form-control" id="FormControlSelect2">
+';
 foreach ($categories as $cat => $category) {
-	echo $category.'<br>';
+	echo '<option>'.$category.'</option>';
 }
 
-echo "</pre>";
+echo '
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+    		<label for="FormControlTextarea1">Описание</label>
+    		<textarea class="form-control" id="FormControlTextarea1" rows="6"></textarea>
+  		</div>
+		</div>
+	</form>
+</div>
+';
 
+//echo var_dump($project);
 
 include_once('footer.php');
 
