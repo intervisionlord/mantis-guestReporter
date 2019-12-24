@@ -36,14 +36,6 @@ if ($captcha_success->success==false) {
   $ISSUE_DESCR = $_POST['Description'];
   $ISSUE_EMAIL = $_POST['email'];
 
-  /*  $ISSUE_ARRAY = array (
-      'project' => array (
-        'id' => $ISSUE_PROJECT
-      ),
-      'category' => $ISSUE_CATEGORY,
-      'summary' => $ISSUE_TITLE,
-      'description' => $ISSUE_DESCR,
-    );*/
 
       $ISSUE_ARRAY = array (
         'project' => array (
@@ -62,8 +54,27 @@ if ($captcha_success->success==false) {
         'password' => $PASSWORD,
         'issue' => $ISSUE_ARRAY,
     );
-    $client = new nusoap_client($WSDL_POINT, false);
-    $new_issue = $client->call('mc_issue_add', $mc_issue_add, $WSDL_POINT);
+
+    $mantis = new soapclient($WSDL_POINT2);
+    $t_issue = array(
+    'project' => array (
+      'id' => $ISSUE_PROJECT),
+    'summary' => $ISSUE_TITLE,
+    'reporter' => array( 'id' => 2 ),
+    'description' => $ISSUE_DESCR,
+    'category' => $ISSUE_CATEGORY,
+);
+
+try {
+    $result = $mantis->mc_issue_add($USERNAME, $PASSWORD, $t_issue);
+    var_dump($result);
+} catch(SoapFault $e) {
+    var_dump($e);
+    exit(1);
+}
+
+//    $client = new nusoap_client($WSDL_POINT, false);
+//    $new_issue = $client->call('mc_issue_add', $mc_issue_add, $WSDL_POINT);
 
   /*  if ($client->fault) {
         echo '<p><b>Сбой: ';

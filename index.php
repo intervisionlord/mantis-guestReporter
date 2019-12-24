@@ -49,7 +49,7 @@ echo '
 				<select class="form-control" id="FormControlSelect2" name="SelectCategory">
 ';
 foreach ($categories as $cat => $category) {
-	echo '<option value="'.$cat.'">'.$category.'</option>';
+	echo '<option value="'.$category.'">'.$category.'</option>';
 }
 
 echo '
