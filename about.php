@@ -8,8 +8,6 @@
 require_once('./core/core.php');
 include_once('header.php');
 
-require_once('./inc/nusoap/0.9.7/nusoap.php');
-
 if ($FORCE_LOCALE == "0") {
   $CHECK_F_LOCALE = LOCALENOTFORCED;
   $LOCALECOLOR = "success";
@@ -18,8 +16,8 @@ if ($FORCE_LOCALE == "0") {
   $LOCALECOLOR = "warning";
 }
 
-$client = new nusoap_client($WSDL_POINT, false);
-$MANTISVERSION = $client->call('mc_version', $WSDL_POINT);
+$mantis = new soapclient($WSDL_POINT);
+$MANTISVERSION = $mantis->mc_version;
 
 echo '
 <div class="container shadow p-4 bgcustom">

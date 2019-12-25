@@ -9,9 +9,7 @@
 require_once('./core/core.php');
 include_once('header.php');
 
-require_once('./inc/nusoap/0.9.7/nusoap.php');
-
-$params = array(
+$get_categories = array(
 	'username' => $USERNAME,
 	'password' => $PASSWORD,
 	'project_id' => $PROJECT_ID,
@@ -22,9 +20,9 @@ $get_user_accessible = array (
 	'password' => $PASSWORD,
 );
 
-$client = new nusoap_client($WSDL_POINT, false);
-$categories = $client->call('mc_project_get_categories', $params, $WSDL_POINT); // Получаем доступные в проекте категории
-$projectlist = $client->call('mc_projects_get_user_accessible', $get_user_accessible, $WSDL_POINT); // Получаем список проектов, в которые можно репортить
+$mantis = new soapclient($WSDL_POINT);
+$categories = $mantis->mc_project_get_categories($USERNAME, $PASSWORD, $PROJECT_ID); // Получаем доступные в проекте категории инцидента
+$projectlist = $mantis->mc_projects_get_user_accessible($USERNAME, $PASSWORD); // Получаем список проектов, в которые можно репортить (права от указанного пользователя)
 
 echo '
 <div class="container-sm border shadow p-4 bgcustom">
@@ -37,8 +35,8 @@ echo '
 				<select class="form-control" id="FormControlSelect1" name="SelectProject">
 ';
 
-foreach ($projectlist as $list => $project) {
-	echo '<option value="'.$project["id"].'">'.$project["name"].'</option>';
+foreach ($projectlist as $project) {
+	echo '<option value="'.$project->id.'">'.$project->name.'</option>';
 }
 
 echo '
@@ -48,7 +46,7 @@ echo '
 				<label for="FormControlSelect2"><span class="text-danger">* </span><b>'.LANG_SELECT_CATEGORY.'</b><span class="text-muted"> ('.LANG_SELECT_CATEGORY_DESCR.')</span></label>
 				<select class="form-control" id="FormControlSelect2" name="SelectCategory">
 ';
-foreach ($categories as $cat => $category) {
+foreach ($categories as $category) {
 	echo '<option value="'.$category.'">'.$category.'</option>';
 }
 
