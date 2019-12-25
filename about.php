@@ -17,7 +17,7 @@ if ($FORCE_LOCALE == "0") {
 }
 
 $mantis = new soapclient($WSDL_POINT);
-$MANTISVERSION = $mantis->mc_version;
+$MANTISVERSION = $mantis->mc_version();
 
 echo '
 <div class="container shadow p-4 bgcustom">

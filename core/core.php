@@ -6,7 +6,7 @@
 * Copyright © 2019 Intervision
 */
 
-$VERSION = '0.9.00';
+$VERSION = '0.9.1';
 $RELEASEDATE = '25.12.19';
 
 if (!file_exists('./conf/conf_secret.php')) {
