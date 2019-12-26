@@ -11,7 +11,7 @@ echo '
 if ($USECAPTCHA == '1') {
   echo '<script src="https://www.google.com/recaptcha/api.js?hl='.$LOCALE_SHORT.'" async defer></script>';
 }
-echo '  
+echo '
   </head>
   <title>'. MAIN_TITLE .'</title>
 
@@ -19,7 +19,7 @@ echo '
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="./">
       <img src="./inc/imgs/caterpillar.png" width="30" height="30" class="d-inline-block align-top" alt="Mantis Reporter Logo">
-        Mantis Reporter
+        '. MAIN_TITLE .'
     </a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
