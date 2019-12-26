@@ -6,6 +6,8 @@
 * Copyright © 2019 Intervision
 */
 
+define('MAIN_TITLE', 'Mantis Reporter'); // Sitename
+
 $FORCE_LOCALE = "0"; // Используется название локали (например ru_RU). По умолчанию "0"
 
 $USERNAME = ""; // Mantis Username

@@ -11,7 +11,7 @@ echo '
     <script src="https://www.google.com/recaptcha/api.js?hl='.$LOCALE_SHORT.'" async defer></script>
   </head>
 
-  <title>Mantis Reporter</title>
+  <title>'. MAIN_TITLE .'</title>
 
 <header>
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
