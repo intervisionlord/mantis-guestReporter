@@ -19,6 +19,6 @@ $WSDL_POINT = ""; // e.g. Your_Mantis_URL/api/soap/mantisconnect.php?wsdl
 $PROJECT_ID = "1"; // It will be deprecated soon (maybe)
 
 // Google Captcha Settings
-$USECAPTCHA = ""; // 0 or 1
+$USECAPTCHA = "0"; // 0 or 1
 $CAPTCHA_SITEKEY = "";
 $CAPTCHA_SECRET = "";

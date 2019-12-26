@@ -76,28 +76,30 @@ echo '
 			<div class="col mr-auto">
 				<span class="text-danger">* </span> - '.LANG_REQURED.'
 			</div>
-			<div class="col-auto">
-				<div class="g-recaptcha" data-sitekey="'.$CAPTCHA_SITEKEY.'"></div>
+			<div class="col-auto">';
 
-				<script>
-					document.getElementById("bugreport").onsubmit = function () {
-    				if (!grecaptcha.getResponse()) {
-         			alert("'.LANG_CAPTCHA_REQUIRED.'");
-         			return false; // возвращаем false и предотвращаем отправку формы
-    				}
-					}
-				</script>
+if ($USECAPTCHA == '1') {
+	echo '
+	<div class="g-recaptcha" data-sitekey="'.$CAPTCHA_SITEKEY.'"></div>
 
+	<script>
+		document.getElementById("bugreport").onsubmit = function () {
+			if (!grecaptcha.getResponse()) {
+				alert("'.LANG_CAPTCHA_REQUIRED.'");
+				return false; // возвращаем false и предотвращаем отправку формы
+			}
+		}
+	</script>';
+}
+
+echo '
 			</div>
 			<div class="col-auto">
 				<button type="submit" class="btn btn-success">'.LANG_SUBMITBTN.'</button>
 			</div>
 		</div>
 	</form>
-</div>
-';
-
-//echo var_dump($categories);
+</div>';
 
 include_once('footer.php');
 

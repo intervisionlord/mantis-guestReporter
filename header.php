@@ -7,10 +7,12 @@ echo '
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="./inc/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./inc/styles/default.css">
-    <script src="https://kit.fontawesome.com/d984210af5.js" crossorigin="anonymous"></script>
-    <script src="https://www.google.com/recaptcha/api.js?hl='.$LOCALE_SHORT.'" async defer></script>
+    <script src="https://kit.fontawesome.com/d984210af5.js" crossorigin="anonymous"></script>';
+if ($USECAPTCHA == '1') {
+  echo '<script src="https://www.google.com/recaptcha/api.js?hl='.$LOCALE_SHORT.'" async defer></script>';
+}
+echo '  
   </head>
-
   <title>'. MAIN_TITLE .'</title>
 
 <header>

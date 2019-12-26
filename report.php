@@ -8,25 +8,28 @@
 require_once('./core/core.php');
 include_once('header.php');
 
-$response = $_POST["g-recaptcha-response"];
-$url = 'https://www.google.com/recaptcha/api/siteverify';
-$data = array(
-  'secret' => $CAPTCHA_SECRET,
-  'response' => $_POST["g-recaptcha-response"]
-);
-$options = array(
-  'http' => array (
-    'method' => 'POST',
-    'header' => 'Content-Type: application/x-www-form-urlencoded\r\n',
-    'content' => http_build_query($data)
-  )
-);
-$context  = stream_context_create($options);
-$verify = file_get_contents($url, false, $context);
-$captcha_success=json_decode($verify);
-if ($captcha_success->success==false) {
+if ($USECAPTCHA == '1') {
+  $response = $_POST["g-recaptcha-response"];
+  $url = 'https://www.google.com/recaptcha/api/siteverify';
+  $data = array(
+    'secret' => $CAPTCHA_SECRET,
+    'response' => $_POST["g-recaptcha-response"]
+  );
+  $options = array(
+    'http' => array (
+      'method' => 'POST',
+      'header' => 'Content-Type: application/x-www-form-urlencoded\r\n',
+      'content' => http_build_query($data)
+    )
+  );
+  $context  = stream_context_create($options);
+  $verify = file_get_contents($url, false, $context);
+  $captcha_success=json_decode($verify);
+}
+
+if (($USECAPTCHA == '1') and ($captcha_success->success == false)) {
   echo '<div class="p-3 mb-2 bg-danger text-white">'. LANG_CAPTCHA_NOTPASSED .'</div>';
-} else if ($captcha_success->success==true) {
+} else if (($USECAPTCHA == '0') or ($captcha_success->success==true)) {
 
 if (empty($_POST['SelectProject']) or empty($_POST['SelectCategory']) or empty($_POST['Title']) or empty($_POST['Description'])) {
   echo '<div class="p-3 mb-2 bg-danger text-white"><b>'. LANG_REQFLD_EMPTY .'</b><br>'.
