@@ -10,7 +10,6 @@ php:
   - '7.4'
 
 before_script:
-  - pecl install intl
   - pecl install soap
 
 
