@@ -10,7 +10,7 @@ php:
   - '7.4'
 
 before_script:
-  - pecl install soap
+  - pear install soap
 
 
 script:
