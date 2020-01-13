@@ -1,4 +1,10 @@
 <?php
+/**
+* Заголовко (Header)
+*
+* @author Intervision (https://github.com/intervisionlord)
+* Copyright © 2019-2020 Intervision
+*/
 require_once('./core/core.php');
 echo '
 <!doctype html>

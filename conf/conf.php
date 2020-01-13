@@ -1,9 +1,9 @@
 <?php
 /**
-* Файл настроек авторизации
+* Файл основных настроек и авторизации
 *
 * @author Intervision (https://github.com/intervisionlord)
-* Copyright © 2019 Intervision
+* Copyright © 2019-2020 Intervision
 */
 
 define('MAIN_TITLE', 'Mantis Reporter'); // Sitename

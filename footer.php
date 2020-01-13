@@ -3,7 +3,7 @@
 * Подвал (Footer)
 *
 * @author Intervision (https://github.com/intervisionlord)
-* Copyright © 2019 Intervision
+* Copyright © 2019-2020 Intervision
 */
 
 echo '
@@ -19,7 +19,7 @@ echo '
               <a href="https://github.com/intervisionlord/mantis-reporter" title="'.WEONGITHUB.'" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
             </div>
             <div class="col">
-              <p class="text-muted text-right">Mantis Reporter &copy; 2019 Intervision</p>
+              <p class="text-muted text-right">Mantis Reporter &copy; 2019-'.date("Y").' Intervision</p>
             </div>
           </div>
         </div>

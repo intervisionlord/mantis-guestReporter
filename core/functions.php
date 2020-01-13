@@ -3,10 +3,8 @@
 * Файл основных функций
 *
 * @author Intervision (https://github.com/intervisionlord)
-* Copyright © 2019 Intervision
+* Copyright © 2019-2020 Intervision
 */
-
-//require_once('./conf/conf.php');
 
 function check_locale($CL_PARAM) {
   $SYS_LOCALE = locale_get_default();
