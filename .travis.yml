@@ -1,0 +1,18 @@
+language: php
+
+php:
+  - '5.4'
+  - '5.6'
+  - '7.0'
+  - '7.1'
+  - '7.2'
+  - '7.3'
+  - '7.4'
+
+before_script:
+  - pecl install intl
+  - pecl install soap
+
+
+script:
+  - php -f "index.php" > /dev/null
