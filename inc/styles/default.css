@@ -2,3 +2,15 @@
   background: url(../imgs/background.svg);
   background-size: contain;
 }
+
+div.imgcorner
+        {
+        position: relative; height: 24px;
+        }
+
+div.imgcorner img
+        {
+        position: fixed; bottom: 55px; right: 10px; no-repeat;
+        opacity: 0.1;
+        filter: alpha(opacity=10); /* For IE8 and earlier */
+        }

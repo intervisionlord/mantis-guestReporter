@@ -16,3 +16,8 @@ before_script:
 script:
   - find . -name "*.php" -exec php -l {} \;
   - php -f "index.php" > /dev/null
+
+after_success:
+  - bash ./test_env/pack_release.sh
+  - curl -T *.zip ftp://${SFTP_USER}:${SFTP_PASSWORD}:${SFTP_SERVER}/
+  - rm -f *.zip
