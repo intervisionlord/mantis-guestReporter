@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.imgur.com/DhbBXnb.png" width="150" height="150" align="center"></img>
+<img src="https://i.imgur.com/DhbBXnb.png" width="150" height="150" align="center">
 </p>
 
 # Mantis Reporter
