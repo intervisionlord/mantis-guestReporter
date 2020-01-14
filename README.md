@@ -3,6 +3,9 @@
 </div>
 
 # Mantis Reporter
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Build Status](https://travis-ci.org/intervisionlord/mantis-reporter.svg?branch=master)](https://travis-ci.org/intervisionlord/mantis-reporter)
+
 Инструмент, позволяющий пользователям анонимно отправлять баг-репорты в систему баг-трекинга Mantis.
 Использует Soap API.
 
@@ -23,7 +26,7 @@
 ![AboutPage](https://i.imgur.com/lnEHwZR.png)
 
 ## Системные требования
- * PHP 7.0+ (ранние версии не тестировались)
+ * PHP 5.6+ (предпочтительно 7.3)
    * Параметры php
      * allow_url_fopen = On
    * Расширения php
