@@ -1,6 +1,6 @@
-<div style="text-align:center">
-<img src="https://i.imgur.com/WnzSYgA.png" width="150" align="center"></img>
-</div>
+<p align="center">
+<img src="https://i.imgur.com/DhbBXnb.png" width="150" height="150" align="center"></img>
+</p>
 
 # Mantis Reporter
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
@@ -8,6 +8,8 @@
 
 Инструмент, позволяющий пользователям анонимно отправлять баг-репорты в систему баг-трекинга Mantis.
 Использует Soap API.
+
+### **[Загрузить последнюю версию](https://github.com/intervisionlord/mantis-reporter/releases)**
 
 ## Ключевые особенности
  * Простой интерфейс с минимумом полей, понятный конечному пользователю.

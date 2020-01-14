@@ -16,3 +16,7 @@ before_script:
 script:
   - find . -name "*.php" -exec php -l {} \;
   - php -f "index.php" > /dev/null
+  - vendor/bin/phpunit --coverage-clover=coverage.xml
+
+after_success:
+    - bash <(curl -s https://codecov.io/bash)
