@@ -19,5 +19,5 @@ script:
 
 after_success:
   - bash ./test_env/pack_release.sh
-  - curl -T *.zip ftp://${SFTP_USER}:${SFTP_PASSWORD}:${SFTP_SERVER}/
+  - curl -T *.zip ftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_SERVER}/
   - rm -f *.zip
