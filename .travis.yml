@@ -18,6 +18,8 @@ script:
   - php -f "index.php" > /dev/null
 
 after_success:
-  - bash ./test_env/pack_release.sh
-  - curl -T *.zip ftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_SERVER}/
-  - rm -f *.zip
+  - grep "VERSION" core/core.php | cut -d"'" -f2 > version.file
+  - zip -r mantis-reporter-`cat version.file`.zip * -x "*/\." -x "test_env/*" -x "CODE_OF_CONDUCT.md" -x "*_secret.php" -x "version.file"
+  - curl -T mantis-reporter-`cat version.file`.zip ftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_SERVER}/
+  - rm -f mantis-reporter-`cat version.file`.zip
+  - rm -f version.file
