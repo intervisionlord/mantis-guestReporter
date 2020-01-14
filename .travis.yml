@@ -8,10 +8,12 @@ php:
   - '7.3'
   - '7.4'
 
+before-install:
+  - sudo apt-get -y install sshpass
+
 before_script:
   - pear install soap-beta
   - mv test_env/test_conf.php conf/conf.php
-
 
 script:
   - find . -name "*.php" -exec php -l {} \;
@@ -20,6 +22,6 @@ script:
 after_success:
   - grep "VERSION" core/core.php | cut -d"'" -f2 > version.file
   - zip -r mantis-reporter-`cat version.file`.zip * -x "*/\." -x "test_env/*" -x "CODE_OF_CONDUCT.md" -x "*_secret.php" -x "version.file"
-  - curl -k -T mantis-reporter-`cat version.file`.zip sftp://${SFTP_USER}:${SFTP_PASSWORD}@${SFTP_SERVER}${SFTP_PATH}
+  - sshpass -p ${SFTP_PASSWORD} scp mantis-reporter-`cat version.file`.zip ${SFTP_USER}@${SFTP_SERVER}:${SFTP_PATH}
   - rm -f mantis-reporter-`cat version.file`.zip
   - rm -f version.file
