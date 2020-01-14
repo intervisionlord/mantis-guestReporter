@@ -22,6 +22,6 @@ script:
 after_success:
   - grep "VERSION" core/core.php | cut -d"'" -f2 > version.file
   - zip -r mantis-reporter-`cat version.file`.zip * -x "*/\." -x "test_env/*" -x "CODE_OF_CONDUCT.md" -x "*_secret.php" -x "version.file"
-  - sshpass -p ${SFTP_PASSWORD} scp mantis-reporter-`cat version.file`.zip ${SFTP_USER}@${SFTP_SERVER}:${SFTP_PATH}
+  - sshpass -p ${SFTP_PASSWORD} scp -o StrictHostKeyChecking=no mantis-reporter-`cat version.file`.zip ${SFTP_USER}@${SFTP_SERVER}:${SFTP_PATH}
   - rm -f mantis-reporter-`cat version.file`.zip
   - rm -f version.file
