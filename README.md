@@ -9,7 +9,7 @@
 Инструмент, позволяющий пользователям анонимно отправлять баг-репорты в систему баг-трекинга Mantis.
 Использует Soap API.
 
-### **[Загрузить последнюю версию](https://github.com/intervisionlord/mantis-reporter/releases)**
+### **[Загрузить последнюю версию](https://github.com/intervisionlord/mantis-reporter/releases/latest)**
 
 ## Ключевые особенности
  * Простой интерфейс с минимумом полей, понятный конечному пользователю.
