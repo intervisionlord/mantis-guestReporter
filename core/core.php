@@ -6,7 +6,7 @@
 * Copyright © 2019-2020 Intervision
 */
 
-$VERSION = '0.9.5i';
+$VERSION = '0.9.6';
 $RELEASEDATE = '14.01.20';
 
 /**

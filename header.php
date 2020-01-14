@@ -11,6 +11,8 @@ echo '
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="'.MAIN_DESCR.'">
+    <link rel="shortcut icon" href="./inc/imgs/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./inc/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./inc/styles/default.css">
     <script src="https://kit.fontawesome.com/d984210af5.js" crossorigin="anonymous"></script>';
@@ -18,13 +20,13 @@ if ($USECAPTCHA == '1') {
   echo '<script src="https://www.google.com/recaptcha/api.js?hl='.$LOCALE_SHORT.'" async defer></script>';
 }
 echo '
+    <title>'. MAIN_TITLE .'</title>
   </head>
-  <title>'. MAIN_TITLE .'</title>
 
 <header>
   <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="./">
-      <img src="./inc/imgs/caterpillar.png" width="30" height="30" class="d-inline-block align-top" alt="Mantis Reporter Logo">
+      <img src="./inc/imgs/mantis.svg" width="30" height="30" class="d-inline-block align-top" alt="Mantis Reporter Logo">
         '. MAIN_TITLE .'
     </a>
     <div class="collapse navbar-collapse" id="navbarNav">
