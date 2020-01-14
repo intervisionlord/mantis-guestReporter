@@ -11,7 +11,7 @@ php:
 
 before_script:
   - pear install soap-beta
-  - mv test_env/test.conf.php conf/conf.php
+  - mv test_env/test_conf.php conf/conf.php
 
 
 script:
