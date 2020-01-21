@@ -13,6 +13,7 @@ before-install:
 
 before_script:
   - pear install soap-beta
+  - cp conf/conf.php conf/conf.bak.php
   - mv test_env/test_conf.php conf/conf.php
 
 script:
@@ -20,6 +21,7 @@ script:
   - php -f "index.php" > /dev/null
 
 after_success:
+  - mv conf/conf.bak.php conf/conf.php
   - grep "VERSION" core/core.php | cut -d"'" -f2 > version.file
   - zip -r mantis-reporter-`cat version.file`.zip * -x "*/\." -x "test_env/*" -x "CODE_OF_CONDUCT.md" -x "*_secret.php" -x "version.file"
   - sshpass -p ${SFTP_PASSWORD} scp -o StrictHostKeyChecking=no mantis-reporter-`cat version.file`.zip ${SFTP_USER}@${SFTP_SERVER}:${SFTP_PATH}
