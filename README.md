@@ -4,7 +4,7 @@
 
 # Mantis Reporter
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/intervisionlord/mantis-reporter)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/intervisionlord/mantis-reporter)](https://github.com/intervisionlord/mantis-reporter/releases/latest)
 [![Build Status](https://travis-ci.org/intervisionlord/mantis-reporter.svg?branch=master)](https://travis-ci.org/intervisionlord/mantis-reporter)
 ![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fother.su%2FmantisReporter)
 
