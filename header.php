@@ -8,7 +8,7 @@
 require_once('./core/core.php');
 echo '
 <!doctype html>
-<html>
+<html lang="'.$LOCALE_SHORT.'">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="description" content="'.MAIN_DESCR.'">

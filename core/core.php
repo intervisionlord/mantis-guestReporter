@@ -6,8 +6,8 @@
 * Copyright © 2019-2020 Intervision
 */
 
-$VERSION = '0.9.6.3';
-$RELEASEDATE = '14.01.20';
+$VERSION = '0.9.7';
+$RELEASEDATE = '21.01.20';
 
 /**
 * Далее происходит проверка на наличие файла конфигурации conf_secret.php
