@@ -56,6 +56,11 @@ echo '
         <td>'.$MANTISVERSION.'</td>
       </tr>
   </table>
-</div>';
+</div>
+
+<div class="imgcorner">
+        <img  src="./inc/imgs/mantis.svg" width="250" height="250">
+</div>
+';
 
 include_once('footer.php');

@@ -4,18 +4,21 @@
 
 # Mantis Reporter
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/intervisionlord/mantis-reporter)](https://github.com/intervisionlord/mantis-reporter/releases/latest)
 [![Build Status](https://travis-ci.org/intervisionlord/mantis-reporter.svg?branch=master)](https://travis-ci.org/intervisionlord/mantis-reporter)
+![W3C Validation](https://img.shields.io/w3c-validation/default?targetUrl=https%3A%2F%2Fother.su%2FmantisReporter)
 
 Инструмент, позволяющий пользователям анонимно отправлять баг-репорты в систему баг-трекинга Mantis.
 Использует Soap API.
 
-### **[Загрузить последнюю версию](https://github.com/intervisionlord/mantis-reporter/releases)**
+### **[Загрузить последнюю версию](https://github.com/intervisionlord/mantis-reporter/releases/latest)**
 
 ## Ключевые особенности
  * Простой интерфейс с минимумом полей, понятный конечному пользователю.
  * Не требует подключения к БД (запросы обратываются через API).
  * Возможно использование Google ReCaptcha для защиты от спама.
  * Автоматическое определение локали сервера и выбор пакета локализации (при его наличии).
+ * Настраиваемые ссылки в заголовке
 
 ### Скриншоты
 #### Общий вид
@@ -61,8 +64,14 @@ _Для работы скрипта требуется учетная запис
  * **CAPTCHA_SITEKEY** - Ключ сайта Google ReCaptcha.
  * **CAPTCHA_SECRET** - Secret Key Google ReCaptcha.
 
+#### Настройка персональных ссылок
+Скрипт поддерживает настройку персональных ссылок с выводом в заголовке. Для того, чтобы задать собственные ссылки, необходимо отредактировать файл `conf/custom_links.php`.
+
+Ссылки добавляются в массив построчно с увеличением порядкового номера элемента.
+Примеры персональных ссылок находятся непосредственно в файле **custom_links.php**.
+
 ## Локализация
-Скрипт пытается определить локаль, заданную в php_intl, а затем, найти соответствующий файл локализации в директории **L10n**
+Скрипт пытается определить локаль, заданную в php_intl, а затем, найти соответствующий файл локализации в директории **l10n**
 
 Локаль можно выставить принудительно в файле `system.conf.php` в переменной **$FORCE_LOCALE**.
 Значение по-умолчанию - `$FORCE_LOCALE="0"`. Это означает, что скрипт будет пытаться определить локаль.

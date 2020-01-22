@@ -8,7 +8,7 @@
 require_once('./core/core.php');
 echo '
 <!doctype html>
-<html>
+<html lang="'.$LOCALE_SHORT.'">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="description" content="'.MAIN_DESCR.'">
@@ -34,6 +34,26 @@ echo '
         <li class="nav-item">
           <a class="nav-link disabled" href="#">&diams;</a>
         </li>
+
+';
+
+if (isset($C_LINK)) {
+
+foreach($C_LINK as $links) {
+  echo '
+    <li class="nav-item">
+      <a class="nav-link" href="'.$links["linkurl"].'"><i class="fa fa-external-link"></i> '.$links["linkname"].'</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">&diams;</a>
+    </li>
+  ';
+}
+
+}
+
+echo '
+
         <li class="nav-item">
           <a class="nav-link" href="'.$MANTISURL.'" target="_blank"><i class="fa fa-external-link"></i> '.GOTOMANTIS.'</a>
         </li>
