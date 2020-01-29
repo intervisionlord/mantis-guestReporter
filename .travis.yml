@@ -20,7 +20,8 @@ before_script:
 script:
   - find . -name "*.php" -exec php -l {} \;
   - php -f "index.php" > /dev/null
-
+  - php -f "about.php" > /dev/null
+  
 after_success:
   - mv conf/conf.bak.php conf/conf.php
   - grep "VERSION" core/core.php | cut -d"'" -f2 > version.file

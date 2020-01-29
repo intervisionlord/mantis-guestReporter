@@ -31,7 +31,7 @@ echo '
 	<form id="bugreport" method="POST" action="report.php">
 		<div class="row p-2">
 			<div class="col">
-				<label for="FormControlSelect1"><span class="text-danger">* </span><b>'.LANG_SELECT_PROJECT.'</b><span class="text-muted"> ('.LANG_SELECT_PROJECT_DESCR.')</span> </label>
+				<label for="FormControlSelect1"><span class="text-danger">* </span><b>'.LANG_SELECT_PROJECT.'</b></label>
 				<select class="form-control" id="FormControlSelect1" name="SelectProject">
 ';
 
@@ -43,7 +43,7 @@ echo '
 				</select>
 			</div>
 			<div class="col">
-				<label for="FormControlSelect2"><span class="text-danger">* </span><b>'.LANG_SELECT_CATEGORY.'</b><span class="text-muted"> ('.LANG_SELECT_CATEGORY_DESCR.')</span></label>
+				<label for="FormControlSelect2"><span class="text-danger">* </span><b>'.LANG_SELECT_CATEGORY.'</b></span></label>
 				<select class="form-control" id="FormControlSelect2" name="SelectCategory">
 ';
 foreach ($categories as $category) {
@@ -57,7 +57,7 @@ echo '
 
 		<div class="row p-2">
 			<div class="col">
-				<label><span class="text-danger">* </span><b>'.LANG_FORM_TITLE.'</b><span class="text-muted"> ('.LANG_FORM_TITLE_DESCR.')</span></label>
+				<label><span class="text-danger">* </span><b>'.LANG_FORM_TITLE.'</b></label>
 				<input class="form-control" type="text" placeholder="" name="Title">
 			</div>
 			<div class="col">
@@ -68,7 +68,7 @@ echo '
 
 		<div class="row p-2">
 			<div class="col">
-    		<label for="FormControlTextarea1"><span class="text-danger">* </span><b>'.LANG_FULLTEXT.'</b><span class="text-muted"> ('.LANG_FULLTEXT_DESCR.')</span></label>
+    		<label for="FormControlTextarea1"><span class="text-danger">* </span><b>'.LANG_FULLTEXT.'</b></label>
     		<textarea class="form-control" id="FormControlTextarea1" rows="6" name="Description"></textarea>
   		</div>
 		</div>
