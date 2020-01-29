@@ -43,7 +43,7 @@ echo '
 				</select>
 			</div>
 			<div class="col">
-				<label for="FormControlSelect2"><span class="text-danger">* </span><b>'.LANG_SELECT_CATEGORY.'</b></span></label>
+				<label for="FormControlSelect2"><span class="text-danger">* </span><b>'.LANG_SELECT_CATEGORY.'</b></label>
 				<select class="form-control" id="FormControlSelect2" name="SelectCategory">
 ';
 foreach ($categories as $category) {
