@@ -6,13 +6,14 @@
 * Copyright © 2019-2020 Intervision
 */
 require_once('./core/core.php');
+
 echo '
 <!doctype html>
 <html lang="'.$LOCALE_SHORT.'">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="description" content="'.MAIN_DESCR.'">
-    <link rel="shortcut icon" href="./inc/imgs/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="inc/imgs/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./inc/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./inc/styles/default.css">
     <script src="https://kit.fontawesome.com/d984210af5.js" crossorigin="anonymous"></script>';

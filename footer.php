@@ -8,7 +8,6 @@
 
 echo '
   </div> <!-- div внутри main закрывающий -->
-
       <footer class="footer fixed-bottom mt-auto py-3 bg-light">
         <div class="container">
           <div class="row">

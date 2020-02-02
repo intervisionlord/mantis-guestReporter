@@ -3,7 +3,7 @@
 * Страница "О программе"
 *
 * @author Intervision (https://github.com/intervisionlord)
-* Copyright © 2019 Intervision
+* Copyright © 2019-2020 Intervision
 */
 require_once('./core/core.php');
 include_once('header.php');
@@ -20,7 +20,7 @@ $mantis = new soapclient($WSDL_POINT);
 $MANTISVERSION = $mantis->mc_version();
 
 echo '
-<div class="container shadow p-4 bgcustom">
+<div class="container-sm border shadow p-4 bgcustom">
   <table class="table table-hover table-bordered table-sm">
     <thead class="thead-dark">
       <tr>

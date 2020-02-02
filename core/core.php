@@ -6,8 +6,8 @@
 * Copyright © 2019-2020 Intervision
 */
 
-$VERSION = '0.9.9';
-$RELEASEDATE = '29.01.20';
+$VERSION = '0.9.9.2';
+$RELEASEDATE = '30.01.20';
 
 /**
 * Далее происходит проверка на наличие файла конфигурации conf_secret.php
@@ -26,9 +26,7 @@ require_once('./core/functions.php');
 
 if ($FORCE_LOCALE == '0') {
   $CUR_LOCALE = check_locale('check'); // check or debug
-  if (!file_exists('./l10n/'.$CUR_LOCALE.'/lang.php')) {
-    $CUR_LOCALE = 'en_EN';
-  }
+
 } else {
   $CUR_LOCALE = $FORCE_LOCALE;
 }

@@ -10,9 +10,10 @@ function check_locale($CL_PARAM) {
   $SYS_LOCALE = locale_get_default();
   if ($CL_PARAM == 'check') {
     if (!is_dir('./l10n/'.$SYS_LOCALE)) {
-      return '-1'; //Директория локали не найдена
+      //return '-1'; //Директория локали не найдена
+      return 'en_EN';
     } else {
-      $LOCALE_DIR = './l10n/'.$SYS_LOCALE;
+      return $SYS_LOCALE;
     }
   }
 
