@@ -1,6 +1,6 @@
 <?php
 /**
-* Заголовко (Header)
+* Заголовок (Header)
 *
 * @author Intervision (https://github.com/intervisionlord)
 * Copyright © 2019-2020 Intervision
